@@ -258,39 +258,7 @@
         }
 
         async function InitYSDK() {
-            try {
-                if (IsLocalHost()) return;
-
-                ysdk = await YaGames.init();
-                ysdk.on('game_api_pause', PauseCallback);
-                ysdk.on('game_api_resume', ResumeCallback);
-
-                // Additional init0 modules
-
-                // Additional init1 modules
-
-                // Additional init2 modules
-await InitPlayer();
-LogStyledMessage('Init Authorization ysdk');
-
-
-                // Additional init modules
-await LoadCloud();
-LogStyledMessage('Init Storage ysdk');
-
-
-                initYSDK = true;
-                if (ygGameInstance != null)
-                    ygGameInstance.SendMessage('YG2Instance', 'InitSDKComplete');
-
-                LogStyledMessage('Init YandexSDK Success');
-
-            } catch (e) {
-                console.error('CRASH Initialization SDK: ', e);
-            }
-
-            if (!IsLocalHost() && !syncInit)
-                StartUnityInstance_IfUnloaded();
+            return;
         }
 
         function InitGame() {
