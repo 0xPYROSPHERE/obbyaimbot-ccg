@@ -43,6 +43,24 @@
 </div>
 <!-- Additional body modules -->
 <script src="index.js"></script>
+<script src="sdsd.loader.js"></script>
+<script>
+            StartUnityInstance = function () {
+                createUnityInstance(canvas, config, (progress) => {
+                    spinner.style.display = "none";
+                    progressBarEmpty.style.display = "";
+                    const adjustedProgress = Math.max(progress, 0.05);
+                    progressBarFull.style.width = `${100 * adjustedProgress}%`;
+                }).then((unityInstance) => {
+                    ygGameInstance = unityInstance;
+                    loadingCover.style.background = "";
+                    loadingCover.style.display = "none";
+                    // Fill Background [Build Modify]
+                }).catch((message) => {
+                    console.error(message);
+                });
+            };
+</script>
 </body>
 </html>
   </foreignObject>
