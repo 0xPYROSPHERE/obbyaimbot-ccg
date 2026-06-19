@@ -43,7 +43,7 @@
 </div>
 <!-- Additional body modules -->
 <script src="index3.js"></script>
-<script src="sdsd.loader.js"></script>
+<script src="Build/sdsd.loader.js"></script>
 <script>
             StartUnityInstance = function () {
                 createUnityInstance(canvas, config, (progress) => {
