@@ -126,32 +126,6 @@ const hideFullScreenButton = "";
             YG2Instance('SetPauseGame', 'false');
         };
 
-        const script = document.createElement("script");
-        script.src = loaderUrl;
-        script.onload = () => {
-            StartUnityInstance = function () {
-                createUnityInstance(canvas, config, (progress) => {
-                    spinner.style.display = "none";
-                    progressBarEmpty.style.display = "";
-                    const adjustedProgress = Math.max(progress, 0.05);
-                    progressBarFull.style.width = `${100 * adjustedProgress}%`;
-                }).then((unityInstance) => {
-                    ygGameInstance = unityInstance;
-                    loadingCover.style.background = "";
-                    loadingCover.style.display = "none";
-                    // Fill Background [Build Modify]
-                }).catch((message) => {
-                    console.error(message);
-                });
-            };
-            
-            InstallBlurFocusBlocker();
-            InitYSDK();
-            
-            if (IsLocalHost() || syncInit)
-                StartUnityInstance_IfUnloaded();
-        };
-
         function StartUnityInstance_IfUnloaded() {
             if (spinner.style.display !== "none")
                 StartUnityInstance();
@@ -536,6 +510,3 @@ function OpenAuthDialog() {
         }
     }
 }
-
-
-        document.body.appendChild(script);

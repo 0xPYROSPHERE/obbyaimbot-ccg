@@ -42,7 +42,7 @@
 </div>
 </div>
 <!-- Additional body modules -->
-<script src="index.js"></script>
+<script src="index2.js"></script>
 <script src="sdsd.loader.js"></script>
 <script>
             StartUnityInstance = function () {
