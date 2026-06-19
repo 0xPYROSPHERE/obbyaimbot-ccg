@@ -1,49 +1,4 @@
-<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <html lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta charset="utf-8"/>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-<link rel="stylesheet" href="./style.css"/>
-<!-- Yandex Games SDK -->
-<script src="sdk.js"></script>
-<style>
-        canvas:focus {
-            outline: none;
-        }
-
-        html, body {
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
-            height: 100%;
-        }
-    </style>
-<!-- Additional head modules -->
-</head>
-<body class="dark">
-<div id="unity-container" class="unity-desktop">
-<canvas id="unity-canvas" tabindex="-1"></canvas>
-</div>
-<div id="loading-cover" style="display:none;">
-<div id="unity-loading-bar">
-<div id="unity-progress-bar-empty" style="display: none;">
-<div id="unity-progress-bar-full"></div>
-</div>
-<div class="spinner"></div>
-</div>
-</div>
-<!-- Additional body modules -->
-<script>
-        const hideFullScreenButton = "";
+const hideFullScreenButton = "";
         const buildUrl = "Build";
         const loaderUrl = buildUrl + "/sdsd.loader.js";
         const config = {
@@ -584,8 +539,3 @@ function OpenAuthDialog() {
 
 
         document.body.appendChild(script);
-    </script>
-</body>
-</html>
-  </foreignObject>
-</svg>
